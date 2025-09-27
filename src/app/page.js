@@ -1,4 +1,6 @@
-'use client'
+"use client";
+
+
 import Heder from "./components/Heder";
 import Form from './components/Form'
 import Yslyg from "./components/Yslyg";
