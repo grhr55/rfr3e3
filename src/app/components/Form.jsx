@@ -1,5 +1,6 @@
 
-'use client'
+
+"use client";
 
 import Image from "next/image";
 
@@ -86,7 +87,7 @@ export default function Heder() {
                       className=" w-[100px] h-[90px]"
                     />
 </div>
-<button className="2xl:w-[358px] xl:w-[358px] lg:w-[358px] md:w-[358px] sm:w-[358px] w-[309px] h-[87px] font-medium rounded-[11px] russo-one-regular shadow-[inset_0px_4px_12px_0px_rgba(0,0,0,0.45)] text-center text-[22px] text-[rgba(241,241,241,1)] bg-[rgba(33,148,255,1)] ">
+<button className="2xl:w-[358px] cursor-pointer xl:w-[358px] open-sans lg:w-[358px] md:w-[358px] sm:w-[358px] w-[309px] h-[87px]  rounded-[11px]  shadow-[inset_0px_4px_12px_0px_rgba(0,0,0,0.45)] text-center text-[22px] text-[rgba(241,241,241,1)] bg-[url(/img/fe.png)] bg-no-repeat       ">
     Заказать доставку газа
 в газгольдер
 </button>

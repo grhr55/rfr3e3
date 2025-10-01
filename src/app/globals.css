@@ -45,6 +45,19 @@
   font-style: normal;
 }
 
+/* базовый размер и цвет */
+.my-pagination .swiper-pagination-bullet {
+  width: 61px;               /* размер */
+  height: 18px;
+  background-color: rgba(241, 241, 241, 0.2);/* цвет неактивной точки */
+  opacity: 1;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
-
+/* активная точка */
+.my-pagination .swiper-pagination-bullet-active {
+  background-color: rgba(33, 148, 255, 1);/* нужный вам цвет */
+ 
+}
 

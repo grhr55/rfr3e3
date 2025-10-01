@@ -1,6 +1,5 @@
+"use client";
 
-
-'use client'
 import Image from "next/image";
 
 export default function Primyt() {
@@ -152,8 +151,8 @@ export default function Primyt() {
                               className=" w-[780px]  min-[800px]:h-[284px] max-[800px]:h-[200px]"
                             />
                             <div>
-                                <h2 className=" text-[clamp(21px,6vw,35px)] min-[1352px]:text-left max-[1352px]:text-center   min-[1352px]:mt-[0px] max-[1352px]:mt-[20px]        m-0 p-0 text-[rgba(241,241,241,1)]   open-sans leading-tight ">Благодаря нашему <br/> собственному автопарку мы <br/> можемдавать гарантию, что <br/> доставим<span className="text-[rgba(33,148,255,1)]"> за 4 часа</span></h2>
-                                <div className="2xl:w-[533px] xl:w-[533px] lg:w-[533px] md:w-[533px] sm:w-[533px] w-[100%] 2xl:h-[35px] xl:h-[35px] lg:h-[35px] md:h-[35px] sm:h-[65px] text-center mt-[20px] bg-[rgba(33,148,255,1)] ">
+                                <h2 className=" text-[clamp(21px,6vw,35px)] min-[1352px]:text-left max-[1352px]:text-center   min-[1352px]:mt-[0px] max-[1352px]:mt-[20px]  min-[1352px]:mb-[0px] max-[1352px]:mb-[20px]    m-0 p-0 text-[rgba(241,241,241,1)]   open-sans leading-tight ">Благодаря нашему <br/> собственному автопарку мы <br/> можемдавать гарантию, что <br/> доставим<span className="text-[rgba(33,148,255,1)]"> за 4 часа</span></h2>
+                                <div className="2xl:w-[533px]  hidden min-[1316px]:flex xl:w-[533px] lg:w-[533px] md:w-[533px] sm:w-[533px] w-[100%] 2xl:h-[35px] xl:h-[35px] lg:h-[35px] md:h-[35px] sm:h-[65px] text-center mt-[20px] bg-[rgba(33,148,255,1)] ">
                                     <h4 className="pt-[5px] open-sans text-[rgba(241,241,241,1)] ">Это сильное конкурентное преимущество, которым мы дорожим</h4>
                                 </div>
                             </div>
