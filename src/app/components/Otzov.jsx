@@ -19,7 +19,7 @@ const products = [
 export default function App() {
   return (
 <div>
-  <h2 className="text-[36px] open-sans text-[rgba(241,241,241,1)] text-center mt-[40px] mb-[50px]">Отзывы наших клиентов</h2>
+  <h2 className="text-[36px] open-sans m-0 p-0 leading-tight text-[rgba(241,241,241,1)] text-center mt-[40px] mb-[50px]">Отзывы наших клиентов</h2>
       <div className="relative">
 
 
@@ -87,7 +87,7 @@ export default function App() {
             </div>
           </SwiperSlide>
         ))}
-        <div className="my-pagination mb-[15px]  flex justify-center  gap-[3px]   "></div>
+        <div className="my-pagination mb-[30px]  flex justify-center  gap-[3px]   "></div>
       </Swiper>
       
    
