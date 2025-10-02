@@ -17,8 +17,9 @@ export default function Home() {
 
     <div className=" bg-[#2194ff0d] w-[100%]  pb-[40px] h-[100%]" > 
     <h2 className="text-[36px] text-[rgba(33,148,255,1)] open-sans text-center py-[30px]">Ответы на часто задаваемые вопросы</h2>
+   <div className="flex justify-center">
 
-       <div className=" 2xl:mx-[23%] xl:mx-[18%] lg:mx-[14%] md:mx-[7%] sm:mx-auto px-[20px]">
+       <div className=" 2xl:mx-[23%] xl:mx-[18%] mx-autolg:mx-[14%] md:mx-[7%] sm: px-[20px]">
         
              
                <div className="px-25px">
@@ -36,9 +37,9 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
-                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[11px] ">Есть ли у вас инженеры в компании?</h2>
+                                <h2 className="text-[clamp(12px,4vw,16px)]   russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[17px] ">Есть ли у вас инженеры в компании?</h2>
                             
                                 
 
@@ -51,9 +52,9 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
-                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular  ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[11px] ">Есть ли у вас инженеры в компании?</h2>
+                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular   ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[17px] ">Есть ли у вас инженеры в компании?</h2>
 
                             </div>
                         
@@ -90,9 +91,9 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
-                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[11px] ">Делаете ли вы отчистку газгольдера?</h2>
+                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[17px] ">Делаете ли вы отчистку газгольдера?</h2>
                             
                                 
 
@@ -105,9 +106,9 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px] h-[16px]"
                                    />
-                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular  ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[11px] ">Делаете ли вы отчистку газгольдера?</h2>
+                                <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular  ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[17px] ">Делаете ли вы отчистку газгольдера?</h2>
                               
                                 
 
@@ -117,12 +118,12 @@ export default function Home() {
                          {faction[1] && (<div className=" pl-[68px]  ">
                         <h4 className="text-left text-[clamp(11px,3vw,16px)] mb-[30px] text-[#ddd4d4b3] mt-[16px] m-0 p-0 leading-tight  dm-sans-regular"> Да от начала работы до окончания  </h4>
                     </div>)}
-  <div className=" 2xl:w-[1100px]  xl:w-[1000px] lg:w-[800px] md:w-[700px] sm:w-[500px] min-[640px]:w-[100%] max-[200px]:w-[100%]  h-[2px] bg-[rgba(255,255,255,0.1)]"></div>
+                    <div className=" 2xl:w-[1100px]  xl:w-[1000px] lg:w-[800px] md:w-[700px] sm:w-[500px] min-[640px]:w-[100%] max-[200px]:w-[100%]  h-[2px] bg-[rgba(255,255,255,0.1)]"></div>
                       
                         
 
                     
-                </button>
+                 </button>
 
 
 
@@ -138,7 +139,7 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
                                 <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[11px] ">А вы не испортите газон у меня и соседей?</h2>
                             
@@ -153,7 +154,7 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px]  min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
                                 <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular  ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[11px] ">А вы не испортите газон у меня и соседей?</h2>
                               
@@ -182,7 +183,7 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
                                 <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[11px] ">Вы предоставляете документы для субсидий?</h2>
                             
@@ -197,7 +198,7 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
                                 <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular  ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[11px] ">Вы предоставляете документы для субсидий?</h2>
                               
@@ -224,7 +225,7 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
                                 <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[11px] ">Смогу ли я заказать во время праздников?</h2>
                             
@@ -239,7 +240,7 @@ export default function Home() {
                                     width={16}
                                     height={16}
                                     alt="User Avatar"
-                                    className="w-[16px]  h-[16px]"
+                                    className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
                                 <h2 className="text-[clamp(12px,4vw,16px)] russo-one-regular  ml-[22px] text-[rgba(241,241,241,1)] text-left m-0 p-0 leading-tight  dm-sans-bold pr-[11px] ">Смогу ли я заказать во время праздников?</h2>
                               
@@ -262,6 +263,7 @@ export default function Home() {
                 
                 </div>
 
+   </div>
        
 
     </div>
