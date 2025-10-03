@@ -9,7 +9,7 @@ return (
     <div>
         <div className="flex  flex-wrap-reverse pt-[55px] justify-center gap-[50px]">
       <div>      <h2 className="m-0 p-0 leading-tight 2xl:text-[40px] xl:text-[40px] lg:text-[32px]  md:text-[26px]  text-[26px]   min-[750px]:text-left max-[750px]:text-center   pb-[40px]  font-black text-[rgba(241,241,241,1)]">Не нашли ответа на свой <br/> вопрос задайте их нашему<br/> специалисту </h2>
-        <form className="flex 2xl:mr-[100px] xl:mr-[100px] lg:mr-[60px] md:mr-[60px] sm:mr-[0px]  mr-[0px]  flex-col gap-[24px]">
+        <form className="flex 2xl:mr-[100px] xl:mr-[100px] lg:mr-[60px] md:mr-[60px] sm:mr-[0px]  mr-[0px]  flex-col min-[450px]:mx-0 max-[450px]:mx-[10px]  min-[450px]:gap-[24px] max-[450px]:gap-[16px]">
         <input
           onChange={(e) => setname(e.target.value)}
           name="name"
@@ -123,6 +123,19 @@ return (
     
 
         </div>
+        <div className="mt-[32px]">
+          <h2 className="min-[600px]:text-[36px] max-[600px]:text-[28px] m-0 p-0 leading-tight font-extrabold text-center text-[rgba(33,148,255,1)]">Закажи прямо сейчас и получи<br/>
+бесплатную установку телеметрии</h2>
+  <div className="flex justify-center">
+    <button className=" w-[295px] cursor-pointer mt-4 h-[87px] font-black rounded-[11px]  bg-[url(/img/fe.png)] bg-no-repeat text-white text-[22px] shadow-[inset_0_4px_12px_0_rgba(0,0,0,0.45)]">
+          Заказать газ
+        </button>
+  </div>
+
+        </div>
+
+
+
        
     </div>
 )
