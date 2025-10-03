@@ -16,7 +16,7 @@ export default function Home() {
  return(
 
     <div className=" bg-[#2194ff0d] w-[100%]  pb-[40px] h-[100%]" > 
-    <h2 className="text-[36px] text-[rgba(33,148,255,1)] open-sans text-center py-[30px]">Ответы на часто задаваемые вопросы</h2>
+    <h2 className=" min-[500xp]:text-[36px] max-[500px]:text-[31px] text-[rgba(33,148,255,1)] open-sans m-0 p-0 leading-tight  text-center py-[30px]">Ответы на часто задаваемые вопросы</h2>
    <div className="flex justify-center">
 
        <div className=" 2xl:mx-[23%] xl:mx-[18%] mx-autolg:mx-[14%] md:mx-[7%] sm: px-[20px]">
