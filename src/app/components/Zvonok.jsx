@@ -47,7 +47,7 @@ return (
                          width={366}
                          height={454}
                          alt="User Avatar"
-                         className=" w-[366px]  h-[454px]  "
+                         className=" w-[366px]  h-[455px]  "
                     />
                     <div className="w-[209px] absolute    rounded-[20px]  2xl:right-[200px] xl:right-[200px] lg:right-[200px] md:right-[200px] sm:right-[15px] right-[15px]   2xl:top-[300px] xl:top-[300px] lg:top-[300px] md:top-[300px] sm:top-[347px]   top-[347px]    h-[93px] bg-[#2194ffd1] ">
                         <div className="px-[26px] py-[13px]">
