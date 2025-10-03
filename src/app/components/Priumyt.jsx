@@ -73,7 +73,7 @@ export default function Primyt() {
                               width={104}
                               height={69}
                               alt="User Avatar"
-                              className=" w-[104px]  ml-[100px] h-[60px]"
+                              className=" w-[104px]  min-[500px]:ml-[100px] max-[500px]:ml-[110px]  h-[60px]"
                             />
                             <h2 className="text-[clamp(25px,4vw,30px)]  open-sans text-center m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  mb-[14px]   ">Оплата удобным<br/>для вас способом </h2>
                             <h4 className="text-[16px] text-center m-0 p-0 leading-tight text-[#fffbeb80]">все газовозы оснащены терминалами для <br/> оплаты вашего заказа</h4>
@@ -84,7 +84,7 @@ export default function Primyt() {
                               width={44}
                               height={60}
                               alt="User Avatar"
-                              className=" w-[44px]  ml-[115px] h-[60px]"
+                              className=" w-[44px]    min-[500px]:ml-[115px] max-[500px]:ml-[120px] h-[60px]"
                             />
                             <h2 className="text-[clamp(25px,4vw,30px)]  open-sans text-center m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  mb-[14px]   "> Чистый газ<br/>
 без примесей  </h2>
@@ -103,7 +103,7 @@ export default function Primyt() {
                               width={111}
                               height={64}
                               alt="User Avatar"
-                              className=" w-[111px] min-[600px]:ml-[100px]  max-[600px]:ml-[85px] h-[64px]"
+                              className=" w-[111px] min-[500px]:ml-[100px] max-[500px]:ml-[89px] h-[64px]"
                             />
                             <h2 className="text-[clamp(25px,4vw,30px)]  open-sans text-center m-0 p-0 leading-tight text-[rgba(33,148,255,1)] mb-[14px]  ">Длина заправочных<br/>
 рукавов — 50 метров</h2>
