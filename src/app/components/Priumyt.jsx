@@ -4,7 +4,8 @@ import Image from "next/image";
 
 export default function Primyt() {
     return(
-        <div>
+       <section  id="glav">
+                <div>
             <h2 className="  text-[clamp(27px,8vw,36px)] text-[rgba(241,241,241,1)] pt-[57px]  font-bold  text-center">Преимущества работы с нашей компанией</h2>
 
 
@@ -177,5 +178,7 @@ export default function Primyt() {
 
 
         </div>
+       </section>
+
     )
 }

@@ -4,9 +4,14 @@
 
 
 import Image from "next/image";
+import { useState } from "react";
 
 
 export default function Heder() {
+  const [meni ,setmeni] = useState(false)
+  const sectionsIds = ['glav', 'yslug', 'tal', 'contact', ];
+
+
   return (
     <div  className=" flex justify-center items-center flex-wrap 2xl:gap-[800px] xl:gap-[600px] lg:gap-[323px] md:gap-[120px]  sm:gap-[70px]   disabled:grid gap-[80px] pt-[24px] ">
 <div  className=" flex  items-center gap-[20px] ">
@@ -34,11 +39,81 @@ export default function Heder() {
 </div>
 
 <div className="flex min-[700px]:hidden">
-  <div>
+      <div className="relative">
+    
+      <button
+        className="cursor-pointer"
+        onClick={() => setmeni(!meni)}
+      >
+        {meni ? (
+           <div className="mt-[20px]">
   <div className="w-[49px] h-[4px] mb-[4px] bg-blue-700"></div>
   <div className="w-[49px] h-[4px] mb-[4px] bg-blue-700"></div>
   <div className="w-[49px] h-[4px] bg-blue-700"></div>
 </div>
+         
+        ) : (
+           <div className="mt-[20px]">
+  <div className="w-[49px] h-[4px] mb-[4px] bg-blue-700"></div>
+  <div className="w-[49px] h-[4px] mb-[4px] bg-blue-700"></div>
+  <div className="w-[49px] h-[4px] bg-blue-700"></div>
+</div>
+        
+        )}
+      </button>
+
+      
+{meni && (
+  <div className="bg-amber-600 fixed top-0 left-0 z-50 w-full h-screen flex flex-col">
+ 
+    <button
+      onClick={() => setmeni(false)}
+      className="absolute top-5 right-5 text-white text-4xl cursor-pointer hover:rotate-90 transition-transform"
+    >
+      ✕
+    </button>
+
+   
+    <nav className="flex flex-col items-center justify-center flex-1 gap-10 text-white font-bold">
+   
+      <div className="flex justify-center">
+                     <Image
+          src="/img/Logo.png"
+          width={269}
+          height={98}
+          alt="User Avatar"
+          className=" min-[500px]:w-[269px] max-[500px]:w-[200px]   min-[500px]:h-[98px] max-[500px]:h-[80px] "
+        />
+      </div>
+
+  
+      {['Приймущество', 'Выбор газа', 'Отзовы', 'Консультация'].map((item, index) => (
+        <a
+          key={index}
+          href="#"
+          className="text-2xl sm:text-3xl cursor-pointer hover:text-gray-200 transition-colors"
+          onClick={(e) => {
+            e.preventDefault();
+            const section = document.getElementById(sectionsIds[index]);
+            if (section) section.scrollIntoView({ behavior: "smooth" });
+            setmeni(false); 
+          }}
+        >
+          {item}
+        </a>
+      ))}
+    </nav>
+
+    <div className="pb-10 text-white text-sm text-center opacity-80">
+      © 2025 АтланТгаз.
+    </div>
+  </div>
+)}
+
+
+
+    </div>
+ 
 </div>
 
         

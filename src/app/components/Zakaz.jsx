@@ -54,7 +54,9 @@ export default function App() {
 
 
   return (
-   <div className="flex  bg-[#2194ff0d] w-[100%] 2xl:h-[600px] xl:h-[600px] lg:h-[600px] md:h-[600px] sm:h-[650px]  min-[400px]:h-[700px] max-[400px]:h-[600px] flex-col relative items-center gap-4 p-6">
+
+    <section  id="yslug">
+      <div className="flex  bg-[#2194ff0d] w-[100%] 2xl:h-[600px] xl:h-[600px] lg:h-[600px] md:h-[600px] sm:h-[650px]  min-[400px]:h-[700px] max-[400px]:h-[600px] flex-col relative items-center gap-4 p-6">
   <h1 className="text-[clamp(28px,8vw,36px)]  text-center m-0 p-0 leading-tight text-[rgba(33,148,255,1)] font-bold">Выберите свой объём Газовоза</h1>
 
   
@@ -151,5 +153,7 @@ export default function App() {
   
 </div>
 
+    </section>
+   
   );
 }

@@ -6,7 +6,9 @@ export default function App(){
     const [telef ,settelef] = useState('');
     const [cont ,setcont] = useState('');
 return (
-    <div>
+
+   <section  id="contact">
+     <div>
         <div className="flex  flex-wrap-reverse pt-[55px] justify-center gap-[50px]">
       <div>      <h2 className="m-0 p-0 leading-tight 2xl:text-[40px] xl:text-[40px] lg:text-[32px]  md:text-[26px]  text-[26px]   min-[750px]:text-left max-[750px]:text-center   pb-[40px]  font-black text-[rgba(241,241,241,1)]">Не нашли ответа на свой <br/> вопрос задайте их нашему<br/> специалисту </h2>
         <form className="flex 2xl:mr-[100px] xl:mr-[100px] lg:mr-[60px] md:mr-[60px] sm:mr-[0px]  mr-[0px]  flex-col min-[450px]:mx-0 max-[450px]:mx-[10px]  min-[450px]:gap-[24px] max-[450px]:gap-[16px]">
@@ -138,6 +140,8 @@ return (
 
        
     </div>
+   </section>
+   
 )
 }
   
