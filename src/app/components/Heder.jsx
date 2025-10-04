@@ -64,39 +64,42 @@ export default function Heder() {
 
       
 {meni && (
-  <div className="bg-amber-600 fixed top-0 left-0 z-50 w-full h-screen flex flex-col">
- 
+  <div className="fixed inset-0 z-50 bg-blue-800 flex flex-col">
+    
+    {/* Кнопка закрытия */}
     <button
       onClick={() => setmeni(false)}
-      className="absolute top-5 right-5 text-white text-4xl cursor-pointer hover:rotate-90 transition-transform"
+      className="absolute top-5 right-5 text-white text-4xl cursor-pointer hover:rotate-90 transition-transform duration-300"
+      aria-label="Закрыть меню"
     >
       ✕
     </button>
 
-   
-    <nav className="flex flex-col items-center justify-center flex-1 gap-10 text-white font-bold">
-   
+    {/* Навигационное меню */}
+    <nav className="flex flex-col items-center justify-center flex-1 gap-15 text-white font-bold">
+      
+      {/* Логотип */}
       <div className="flex justify-center">
-                     <Image
+        <Image
           src="/img/Logo.png"
           width={269}
           height={98}
-          alt="User Avatar"
-          className=" min-[500px]:w-[269px] max-[500px]:w-[200px]   min-[500px]:h-[98px] max-[500px]:h-[80px] "
+          alt="Логотип"
+          className="w-[200px] h-[80px] sm:w-[269px] sm:h-[98px] object-contain"
         />
       </div>
 
-  
-      {['Приймущество', 'Выбор газа', 'Отзовы', 'Консультация'].map((item, index) => (
+      {/* Ссылки на секции */}
+      {['Преймущества', 'Выбор газа', 'Отзывы', 'Консультация'].map((item, index) => (
         <a
           key={index}
           href="#"
-          className="text-2xl sm:text-3xl cursor-pointer hover:text-gray-200 transition-colors"
+          className="text-2xl sm:text-3xl cursor-pointer hover:text-gray-200 transition-colors duration-200"
           onClick={(e) => {
             e.preventDefault();
             const section = document.getElementById(sectionsIds[index]);
             if (section) section.scrollIntoView({ behavior: "smooth" });
-            setmeni(false); 
+            setmeni(false);
           }}
         >
           {item}
@@ -104,11 +107,13 @@ export default function Heder() {
       ))}
     </nav>
 
-    <div className="pb-10 text-white text-sm text-center opacity-80">
+    {/* Подвал */}
+    <footer className="pb-6 text-white text-sm text-center opacity-80">
       © 2025 АтланТгаз.
-    </div>
+    </footer>
   </div>
 )}
+
 
 
 
