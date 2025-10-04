@@ -2,11 +2,129 @@
 
 
 import Image from "next/image";
+import { useState ,useEffect} from "react";
+
 
 export default function Yslyg() {
+
+
+         const [zauvs , setzauvs] = useState(false)
+         const [name,setname] = useState('')
+         const [telef,settelef] = useState('')
+    
+    
+    
+         const Databas = async (e) => {
+        e.preventDefault(); 
+    
+      try {
+    
+     
+        const data = {
+      name,
+      telef,
+    };
+        const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body:JSON.stringify(data)
+        });
+        if(response.ok){
+        window.location.href='/Thankyou'
+        }else{
+           window.location.href='/Error'
+        }
+    
+    
+     
+    
+      } catch (err) {
+        console.error("Fetch error:", err);
+       
+      }
+    };
+
+       useEffect(() => {
+        if (zauvs) {
+        
+          document.body.style.overflow = "hidden";
+        } else {
+        
+          document.body.style.overflow = "auto";
+        }
+    
+        return () => {
+          document.body.style.overflow = "auto";
+        };
+      }, [zauvs]);
+    
+
+
+
     return(
 
         <div className="bg-[#2194ff0d] w-[100%] 2xl:h-[600px] xl:h-[600px] lg:h-[1200px] md:h-[1200px] sm:h-[1200px]  h-[1080px]">
+
+            {zauvs && (
+              <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+                {/* Мини-окно */}
+               <div>
+                 <div className="bg-white rounded-[33px]   min-[600]:w-[100%]  sm:max-[600px]:w-[350px] max-[500px]:w-[300px]  min-[600px]:mx-[0px]  max-[600px]:mx-[80px]   h-auto  min-[500px]:px-12  max-[500px]:px-7  py-6">
+                  <div className="flex justify-between mb-6">
+                    <h2 className="text-[24px] font-black leading-tight text-[rgba(33,148,255,1)]">
+                      Доставим газ<br />
+                      за 4 часа
+                    </h2>
+                    <button onClick={() => setzauvs(false)}>
+                      <Image
+                        src="/img/Vector 1.svg"
+                        width={22}
+                        height={22}
+                        alt="крест"
+                        className="w-[22px] cursor-pointer h-[22px]"
+                      />
+                    </button>
+                  </div>
+            
+                  <form   onSubmit={Databas} className="flex flex-col gap-4">
+                    <input
+                      onChange={(e) => setname(e.target.value)}
+                      name="name"
+                      value={name}
+                      type="text"
+                      placeholder="ИМЯ"
+                      className="border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
+                    />
+            
+                    <input
+                      onChange={(e) => settelef(e.target.value)}
+                      type="tel"
+                      name="tel"
+                      value={telef}
+                      placeholder="ТЕЛЕФОН"
+                      pattern="[0-9]*"
+                      inputMode="numeric"
+                      className="border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
+                    />
+            
+                    <button onClick={Databas} type="submit" className="w-full cursor-pointer mt-4 h-[87px] font-black rounded-[11px]  bg-[url(/img/fe.png)] bg-no-repeat text-white text-[clamp(16px,3vw,22px)] shadow-[inset_0_4px_12px_0_rgba(0,0,0,0.45)]">
+                      Заказать доставку газа
+                    </button>
+                  </form>
+            
+                 
+                </div>
+                 <h5 className="text-center text-[clamp(8px,2vw,14px)] text-[#838587d6] mt-4">
+                    Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+                    <br />и соглашаетесь с условиями политики конфиденциальности
+                  </h5>
+                
+               </div>
+               
+              </div>
+            )}
             <div className=" text-center">
                 <h2 className="  text-[clamp(28px,8vw,40px)]  m-0 p-0 leading-tight font-bold russo-one-reg  text-[rgba(33,148,255,1)] pt-[46px] ">Стоимость газа в ваш газгольдер сегодня</h2>
             </div>
@@ -17,7 +135,7 @@ export default function Yslyg() {
                     <h2 className="text-[36px] font-extrabold   text-[rgba(241,241,241,1)] ">Пропан</h2>
                     <h2 className="text-[24px] font-extrabold   text-[rgba(33,148,255,1)]">от 25 рублей за литр</h2>
                     <h6 className="text-[16px] mt-[21px] mb-[28px] text-[rgba(241,241,241,1)] m-0 p-0 leading-tight open-sa  min-[600px]:text-left max-[600px]:text-center">Физически испарение<br/> происходит до -40 градусов, что<br/> позволяет использовать его в<br/> наших с вами погодных <br/> условиях</h6>
-                    <button className="w-[155px] bg-[rgba(33,148,255,1)] text-[rgba(241,241,241,1)] h-[43px] text-center open-sans mt-[8px] rounded-[50px] ">Заказать</button>
+                    <button onClick={() => setzauvs(true) } className="w-[155px] bg-[rgba(33,148,255,1)] text-[rgba(241,241,241,1)] h-[43px] text-center open-sans mt-[8px] rounded-[50px] ">Заказать</button>
                 </div>
 
              </div>
@@ -59,7 +177,7 @@ export default function Yslyg() {
                     <h2 className="text-[36px] font-extrabold   text-[rgba(241,241,241,1)] ">Бутан</h2>
                     <h2 className="text-[24px] font-extrabold   text-[rgba(33,148,255,1)]">от 16 рублей за литр</h2>
                     <h6 className="text-[16px] mt-[21px] mb-[30px] text-[#cdc8c8a6] m-0 p-0 leading-tight open-sa min-[600px]:text-left max-[600px]:text-center "> Испарение Бутана происходит <br/> только до 0 градусов и годится<br/> для использования в тёплое <br/> время года</h6>
-                    <button className="w-[155px] bg-[rgba(33,148,255,1)] text-[rgba(241,241,241,1)] h-[43px] text-center open-sans mt-[8px] rounded-[50px] ">Заказать</button>
+                    <button  onClick={() => setzauvs(true) }  className="w-[155px] bg-[rgba(33,148,255,1)] text-[rgba(241,241,241,1)] h-[43px] text-center open-sans mt-[8px] rounded-[50px] ">Заказать</button>
                 </div>
 
              </div>

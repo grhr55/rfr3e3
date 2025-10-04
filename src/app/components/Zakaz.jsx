@@ -1,3 +1,4 @@
+
 "use client";
 
 
@@ -6,24 +7,85 @@ import Image from "next/image";
 
 export default function App() {
   const products = 
-   [{name:'Малый ' ,names:'2000 л.',img:'/img/01 2.png'},
-    {name:'Средний ', names:'6000 л.' , img:'/img/02 1.png'},
-    {name:'Стандартный',names:'10 000 л.' ,img:'/img/03 1.png'},
-    {name:'Оптовый ',names:'40 000 л.',img:'/img/04 1.png'}] 
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [orders, setOrders] = useState([]);
-  const [name,setname] = useState('')
-  const [telef,settelef] = useState('')
-  const [zauvs , setzauvs] = useState(false)
+    [{obum:'Малый ' ,liter:'2000 л.',img:'/img/01 2.png'},
+     {obum:'Средний ', liter:'6000 л.' , img:'/img/02 1.png'},
+     {obum:'Стандартный',liter:'10 000 л.' ,img:'/img/03 1.png'},
+     {obum:'Оптовый ',liter:'40 000 л.',img:'/img/04 1.png'}] 
+     const [selectedIndex, setSelectedIndex] = useState(0);
+     const [orders,setorders] =useState([])
+
+     const [name,setname] = useState('')
+     const [telef,settelef] = useState('')
+
+     const [zauvs , setzauvs] = useState(false)
+
+
 
   const handleSelect = (index) => {
-    setSelectedIndex(index );
+  setSelectedIndex(index );
   };
 
   const oncis = () => {
     setzauvs(true)
 
   }
+
+
+const Databas = async (e) => {
+  e.preventDefault(); 
+
+ 
+
+  try {
+
+    const selectedProduct = products[selectedIndex];
+    const data = {
+  name,
+  telef,
+  obum: selectedProduct.obum,
+  liter: selectedProduct.liter,
+  img:selectedProduct.img
+};
+    const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body:JSON.stringify(data)
+    });
+    if(response.ok){
+    window.location.href='/Thankyou'
+    }else{
+       window.location.href='/Error'
+    }
+
+
+ 
+
+  } catch (err) {
+    console.error("Fetch error:", err);
+   
+  }
+};
+
+  const handleSubmit = () => {
+    
+    
+    if (selectedIndex !== null) {
+      const newOrder = {
+        product: products[selectedIndex],
+        index: selectedIndex,
+        timestamp: new Date().toLocaleTimeString(),
+      };
+      setorders([...orders, newOrder]);
+      
+    } else {
+      alert("❌ Вы не выбрали товар!");
+    }
+  };
+
+
+
    useEffect(() => {
     if (zauvs) {
     
@@ -38,19 +100,7 @@ export default function App() {
     };
   }, [zauvs]);
 
-  const handleSubmit = () => {
-    if (selectedIndex !== null) {
-      const newOrder = {
-        product: products[selectedIndex],
-        index: selectedIndex,
-        timestamp: new Date().toLocaleTimeString(),
-      };
-      setOrders([...orders, newOrder]);
-      
-    } else {
-      alert("❌ Вы не выбрали товар!");
-    }
-  };
+
 
 
   return (
@@ -69,7 +119,7 @@ export default function App() {
           ${selectedIndex === index ? "bg-[rgba(33,148,255,1)] text-white" : "bg-[rgba(241,241,241,0.2)] text-[#f1f1f1b7]"}
         `}
       >
-       <h2 className="text-center open-sans  text-[18px] m-0 p-0 leading-tight ">{product.name}<br/>{product.names}</h2>
+       <h2 className="text-center open-sans  text-[18px] m-0 p-0 leading-tight ">{product.obum}<br/>{product.liter}</h2>
       </button>
     ))}
   </div>
@@ -95,7 +145,7 @@ export default function App() {
         </button>
       </div>
 
-      <form className="flex flex-col gap-4">
+      <form   onSubmit={Databas} className="flex flex-col gap-4">
         <input
           onChange={(e) => setname(e.target.value)}
           name="name"
@@ -116,7 +166,7 @@ export default function App() {
           className="border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
         />
 
-        <button className="w-full cursor-pointer mt-4 h-[87px] font-black rounded-[11px]  bg-[url(/img/fe.png)] bg-no-repeat text-white text-[clamp(16px,3vw,22px)] shadow-[inset_0_4px_12px_0_rgba(0,0,0,0.45)]">
+        <button onClick={handleSubmit} type="submit" className="w-full cursor-pointer mt-4 h-[87px] font-black rounded-[11px]  bg-[url(/img/fe.png)] bg-no-repeat text-white text-[clamp(16px,3vw,22px)] shadow-[inset_0_4px_12px_0_rgba(0,0,0,0.45)]">
           Заказать доставку газа
         </button>
       </form>
@@ -143,7 +193,7 @@ export default function App() {
       src={products[selectedIndex].img}
       width={545}
       height={246}
-      alt={products[selectedIndex].name}
+      alt={products[selectedIndex].obum}
       className="w-[545px] 2xl:h-[246px] xl:h-[246px] lg:h-[246px] md:h-[246px] sm:h-[224px] min-[400px]:h-[224px] max-[400px]:h-[170px] mx-auto"
     />
   )}
@@ -157,3 +207,4 @@ export default function App() {
    
   );
 }
+
