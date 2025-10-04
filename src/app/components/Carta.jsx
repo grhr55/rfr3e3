@@ -4,7 +4,7 @@ import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 export default function App() {
   return (
-    <YMaps query={{ apikey: "YOUR_API_KEY", lang: "ru_RU" }}>
+    <YMaps query={{ apikey: "0d853250-dd60-4ee7-a243-538bb1ae69d6", lang: "ru_RU" }}>
       <Map 
         defaultState={{ center: [50.4501, 30.5234], zoom: 10 }} 
         width="100%" 

@@ -7,6 +7,7 @@ import Zakaz from './components/Zakaz'
 import Otzov from './components/Otzov'
 import Vopros from './components/Vopros'
 import Zvonok from './components/Zvonok'
+import Carta from './components/Carta'
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
       <Otzov/>
       <Vopros/>
       <Zvonok/>
+      <Carta/>
     
       
      
