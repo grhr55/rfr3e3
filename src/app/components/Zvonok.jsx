@@ -24,6 +24,9 @@ try{
     }else{
        window.location.href='/Error'
     }
+    setname('')
+    settelef('')
+    setcont('')
 
 }catch(error){
    window.location.href='/Error'
