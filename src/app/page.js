@@ -16,7 +16,7 @@ import ClientOnlyCarta from './components/ClientOnlyCarta'
 
 export default function Home() {
   return (
-    <div className="bg-[rgba(45,45,45,1)]  w-[100%] h-[100%]  pb-[170px]">
+    <div className="bg-[rgba(45,45,45,1)]  w-[100%] h-[100%]  pb-[50px]">
       <Heder/>
       <Form/>
       <Yslyg/>
