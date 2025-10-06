@@ -6,14 +6,14 @@ import L from 'leaflet';
 
 // Создаём кастомную иконку
 const customIcon = L.icon({
-  iconUrl: '/img/placeholder 1.png', // URL на изображение
-  iconSize: [40, 40], // размер изображения (ширина, высота)
-  iconAnchor: [20, 40], // точка "якоря" (относительно левого верхнего угла)
-  popupAnchor: [0, -40], // смещение для popup (если нужно)
+  iconUrl: '/img/placeholder 1.png', 
+  iconSize: [40, 40],
+  iconAnchor: [20, 40], 
+  popupAnchor: [0, -40], 
 });
 
 export default function MyMap() {
-  const position = [55.547458, 37.772559]; // Киев, например
+  const position = [55.547458, 37.772559]; 
 
   return (
     <MapContainer center={position} zoom={13} style={{ height: "400px", width: "100%" }}>
