@@ -5,13 +5,43 @@ export default function App(){
     const [name ,setname] = useState('');
     const [telef ,settelef] = useState('');
     const [cont ,setcont] = useState('');
+
+
+const Contacts = async (e) => {
+  e.preventDefault(); 
+
+try{
+  const data = {name,telef,cont}
+  const response =  await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body:JSON.stringify(data)
+    });
+    if(response.ok){
+    window.location.href='/Thankyou'
+    }else{
+       window.location.href='/Error'
+    }
+
+}catch(error){
+   window.location.href='/Error'
+
+}
+
+
+}
+  
+
+
 return (
 
    <section  id="contact">
      <div>
         <div className="flex  flex-wrap-reverse pt-[55px] justify-center gap-[50px]">
       <div>      <h2 className="m-0 p-0 leading-tight 2xl:text-[40px] xl:text-[40px] lg:text-[32px]  md:text-[26px]  text-[26px]   min-[750px]:text-left max-[750px]:text-center   pb-[40px]  font-black text-[rgba(241,241,241,1)]">Не нашли ответа на свой <br/> вопрос задайте их нашему<br/> специалисту </h2>
-        <form className="flex 2xl:mr-[100px] xl:mr-[100px] lg:mr-[60px] md:mr-[60px] sm:mr-[0px]  mr-[0px]  flex-col min-[450px]:mx-0 max-[450px]:mx-[10px]  min-[450px]:gap-[24px] max-[450px]:gap-[16px]">
+        <form  onSubmit={Contacts} className="flex 2xl:mr-[100px] xl:mr-[100px] lg:mr-[60px] md:mr-[60px] sm:mr-[0px]  mr-[0px]  flex-col min-[450px]:mx-0 max-[450px]:mx-[10px]  min-[450px]:gap-[24px] max-[450px]:gap-[16px]">
         <input
           onChange={(e) => setname(e.target.value)}
           name="name"
@@ -39,7 +69,7 @@ return (
   className="border bg-[rgba(222,222,222,1)] text-[12px] rounded-xl pb-[34px] pl-4 pt-[17px] focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
 />
 
-<button className="w-[220px] h-[47px] bg-[rgba(33,148,255,1)] min-[750px]:mx-0 max-[750px]:mx-auto text-[18px] font-bold  text-[rgba(241,241,241,1)]  rounded-[50px]">Задать вопрос </button>
+<button type="onsubmit" className="w-[220px] h-[47px] bg-[rgba(33,148,255,1)] min-[750px]:mx-0 max-[750px]:mx-auto text-[18px] font-bold  text-[rgba(241,241,241,1)]  rounded-[50px]">Задать вопрос </button>
 
    
       </form></div>
