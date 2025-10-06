@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-// Создаём кастомную иконку
+
 const customIcon = L.icon({
   iconUrl: '/img/placeholder 1.png', 
   iconSize: [40, 40],
@@ -16,13 +16,16 @@ export default function MyMap() {
   const position = [55.547458, 37.772559]; 
 
   return (
-    <MapContainer center={position} zoom={13} style={{ height: "400px", width: "100%" }}>
+    <MapContainer center={position} className="rounded-tr-[33px] rounded-br-[33px] overflow-hidden"
+ zoom={13} style={{ height: "488px", width: "100%" }}>
       <TileLayer
         attribution='&copy; OpenStreetMap'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+     
+        
       />
       
-      <Marker position={position} icon={customIcon}>
+      <Marker   position={position} icon={customIcon}>
         <Popup>
           <b>Пример фото-метки</b><br />
           Здесь можно описать объект.
