@@ -24,7 +24,7 @@ export default function Yslyg() {
       name,
       telef,
     };
-        const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+        const response =   await fetch("http://localhost:5000/zyuvs/zauv", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

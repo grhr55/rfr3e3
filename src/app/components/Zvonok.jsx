@@ -12,7 +12,7 @@ const Contacts = async (e) => {
 
 try{
   const data = {name,telef,cont}
-  const response =  await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+  const response =  await fetch("http://localhost:5000/ros/voprosi", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
