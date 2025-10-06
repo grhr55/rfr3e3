@@ -16,7 +16,7 @@ export default function MyMap() {
   const position = [55.547458, 37.772559]; 
 
   return (
-    <MapContainer center={position} className="rounded-tr-[33px] rounded-br-[33px] overflow-hidden"
+    <MapContainer center={position} className="rounded-tr-[33px] min-[1180px]:h-[100%] max-[1180px]:h-[350px] min-[1180xp]:rounded-br-[33px] max-[1180px]:rounded-[33px] overflow-hidden"
  zoom={13} style={{ height: "488px", width: "100%" }}>
       <TileLayer
         attribution='&copy; OpenStreetMap'
