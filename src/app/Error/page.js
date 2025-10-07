@@ -16,7 +16,7 @@ export default function Erro() {
   </p>
 
   <a
-    href="/"
+    href="/pages"
     className="w-[295px] h-[87px] py-[20px] px-[30px] mt-[30px] cursor-pointer font-black rounded-[11px]
                bg-[url('/img/fe.png')] bg-no-repeat bg-cover bg-center
                text-white text-[22px] shadow-[inset_0_4px_12px_0_rgba(0,0,0,0.45)] transition duration-300 hover:opacity-90"
