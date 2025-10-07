@@ -39,7 +39,7 @@ export default function Home() {
                                     alt="User Avatar"
                                     className="w-[16px] min-[400px]:mt-[0px] max-[400px]:mt-[10px]  h-[16px]"
                                    />
-                                <h2 className="text-[clamp(12px,4vw,16px)]   russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]  dm-sans-bold pr-[17px] ">Есть ли у вас инженеры в компании?</h2>
+                                <h2 className="text-[clamp(12px,4vw,16px)]   russo-one-regular ml-[22px]  text-left m-0 p-0 leading-tight text-[rgba(33,148,255,1)]   dm-sans-bold pr-[17px] ">Есть ли у вас инженеры в компании?</h2>
                             
                                 
 
@@ -60,7 +60,7 @@ export default function Home() {
                         
                         </div>}
                          {faction[0] && (<div className=" pl-[68px]  ">
-                        <h4 className="text-left text-[clamp(11px,3vw,16px)] mb-[30px] text-[#ddd4d4b3] mt-[16px] m-0 p-0 leading-tight  dm-sans-regular"> Да команда спецыолистов которые помогает облегчить нашу работу </h4>
+                        <h4 className="text-left text-[clamp(11px,3vw,16px)] mb-[30px] text-[#ddd4d4b3] mt-[16px] m-0 p-0 leading-tight  dm-sans-regular"> Да команда специалистство которые помогает облегчить нашу работу </h4>
                     </div>)}
                     
                         </div>

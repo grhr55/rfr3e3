@@ -6,7 +6,7 @@ const Carta = dynamic(() => import('./Carta'), { ssr: false });
 
 export default function ClientOnlyCarta() {
   return (
-   <div >
+   <div  className=' relative z-10' >
     <div className='flex  mt-[40px] justify-center'>
         <div className='min-[1180px]:w-[1140px]  max-[1180px]:w-[80%] min-[1180px]:h-[488px] max-[1180px]:h-[670px]  rounded-[33px] bg-[rgba(255,253,253,1)]'>
 

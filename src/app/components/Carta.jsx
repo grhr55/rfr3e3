@@ -27,8 +27,8 @@ export default function MyMap() {
       
       <Marker   position={position} icon={customIcon}>
         <Popup>
-          <b>Пример фото-метки</b><br />
-          Здесь можно описать объект.
+          <b>Мы тут заходи  звонок не работает нужно орать  </b><br />
+         
         </Popup>
       </Marker>
     </MapContainer>

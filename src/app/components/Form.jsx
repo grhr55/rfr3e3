@@ -23,7 +23,7 @@ export default function Heder() {
   name,
   telef,
 };
-    const response =   await fetch("http://localhost:5000/zyuvs/zauv", {
+    const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -176,6 +176,7 @@ export default function Heder() {
           onChange={(e) => setname(e.target.value)}
           name="name"
           value={name}
+          required
           type="text"
           placeholder="ИМЯ"
           className="border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
@@ -185,6 +186,7 @@ export default function Heder() {
           onChange={(e) => settelef(e.target.value)}
           type="tel"
           name="tel"
+          required
           value={telef}
           placeholder="ТЕЛЕФОН"
           pattern="[0-9]*"
