@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useState , useEffect } from "react";
+import { ClockLoader } from 'react-spinners';
+
 export default function App(){
 
     const [name ,setname] = useState('');
@@ -9,6 +11,7 @@ export default function App(){
     const[myname,setmyname] = useState('')
      const[mytelef,setmytelef] = useState('')
     const [cont ,setcont] = useState('');
+     const [isLoading, setIsLoading] = useState(false);
    
     
 
@@ -18,6 +21,7 @@ export default function App(){
 
 const Contacts = async (e) => {
   e.preventDefault(); 
+  setIsLoading(true)
 
 
 
@@ -41,6 +45,7 @@ try{
 
 }catch(error){
    window.location.href='/Error'
+   setIsLoading(false)
 
 }
 
@@ -48,6 +53,7 @@ try{
 }
   const Databas = async (e) => {
         e.preventDefault(); 
+        setIsLoading(true)
     
       try {
     
@@ -74,7 +80,7 @@ try{
     
       } catch (err) {
         console.error("Fetch error:", err);
-       
+       setIsLoading(false)
       }
     };
 
@@ -101,8 +107,11 @@ return (
 
           {zauvs && (
                   <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-                    {/* Мини-окно */}
-                   <div>
+                  
+               {isLoading ? (
+                 <ClockLoader color="#36d7b7" size={80} loading={true} />
+               ):(
+                    <div>
                      <div className="bg-white rounded-[33px]   min-[600]:w-[100%]  sm:max-[600px]:w-[350px] max-[500px]:w-[300px]  min-[600px]:mx-[0px]  max-[600px]:mx-[80px]   h-auto  min-[500px]:px-12  max-[500px]:px-7  py-6">
                       <div className="flex justify-between mb-6">
                         <h2 className="text-[24px] font-black leading-tight text-[rgba(33,148,255,1)]">
@@ -156,6 +165,7 @@ return (
                       </h5>
                     
                    </div>
+               )}
                    
                   </div>
                 )}
@@ -163,7 +173,19 @@ return (
   
      <div>
         <div className="flex  flex-wrap-reverse pt-[55px] justify-center gap-[50px]">
-      <div>      <h2 className="m-0 p-0 leading-tight 2xl:text-[40px] xl:text-[40px] lg:text-[32px]  md:text-[26px]  text-[26px]   min-[750px]:text-left max-[750px]:text-center   pb-[40px]  font-black text-[rgba(241,241,241,1)]">Не нашли ответа на свой <br/> вопрос задайте их нашему<br/> специалисту </h2>
+      <div> 
+             <h2 className="m-0 p-0 leading-tight 2xl:text-[40px] xl:text-[40px] lg:text-[32px]  md:text-[26px]  text-[26px]   min-[750px]:text-left max-[750px]:text-center   pb-[40px]  font-black text-[rgba(241,241,241,1)]">Не нашли ответа на свой <br/> вопрос задайте их нашему<br/> специалисту </h2>
+
+             {isLoading ? (
+                <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+                <ClockLoader color="#36d7b7" size={80} loading={true} />
+              </div>
+
+             ):(
+            null
+
+             )}
+             
         <form  onSubmit={Contacts} className="flex 2xl:mr-[100px] xl:mr-[100px] lg:mr-[60px] md:mr-[60px] sm:mr-[0px]  mr-[0px]  flex-col min-[450px]:mx-0 max-[450px]:mx-[10px]  min-[450px]:gap-[24px] max-[450px]:gap-[16px]">
         <input
           onChange={(e) => setmyname(e.target.value)}
@@ -187,18 +209,29 @@ return (
           className="border rounded-xl text-[12px] bg-[rgba(222,222,222,1)] px-5 py-4 focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
         />
           <textarea
-  onChange={(e) => setcont(e.target.value)}
-  name="cont"
-  required
-  value={cont}
-  placeholder="ВАШ ВОПРОС"
-  className="border bg-[rgba(222,222,222,1)] text-[12px] rounded-xl pb-[34px] pl-4 pt-[17px] focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
+        onChange={(e) => setcont(e.target.value)}
+        name="cont"
+        required
+        value={cont}
+        placeholder="ВАШ ВОПРОС"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        className="border bg-[rgba(222,222,222,1)] text-[12px] rounded-xl pb-[34px] pl-4 pt-[17px] focus:outline-none focus:ring-2 focus:ring-[rgba(33,148,255,1)]"
 />
 
-<button type="submit" className="w-[220px] h-[47px] cursor-pointer bg-[rgba(33,148,255,1)] min-[750px]:mx-0 max-[750px]:mx-auto text-[18px] font-bold  text-[rgba(241,241,241,1)]  rounded-[50px]">Задать вопрос </button>
+<button type="submit" onClick={() =>setIsLoading(!true) }   className="w-[220px] h-[47px] cursor-pointer bg-[rgba(33,148,255,1)] min-[750px]:mx-0 max-[750px]:mx-auto text-[18px] font-bold  text-[rgba(241,241,241,1)]  rounded-[50px]">Задать вопрос </button>
 
    
-      </form></div>
+      </form>
+      </div>
             <div className="  relative">
                     <Image
                          src="/img/image 1.png"

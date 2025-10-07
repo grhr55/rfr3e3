@@ -4,17 +4,20 @@
 
 import Image from "next/image";
 import { useState ,useEffect} from "react";
+import { ClockLoader } from 'react-spinners';
 
 
 export default function Heder() {
      const [zauvs , setzauvs] = useState(false)
      const [name,setname] = useState('')
      const [telef,settelef] = useState('')
+       const [isLoading, setIsLoading] = useState(false);
 
 
 
      const Databas = async (e) => {
     e.preventDefault(); 
+    setIsLoading(true)
 
   try {
 
@@ -30,6 +33,7 @@ export default function Heder() {
       },
       body:JSON.stringify(data)
     });
+    <ClockLoader color="#36d7b7" size={80} loading={true} />
     if(response.ok){
     window.location.href='/Thankyou'
     }else{
@@ -37,10 +41,9 @@ export default function Heder() {
     }
 
 
- 
-
   } catch (err) {
     console.error("Fetch error:", err);
+     setIsLoading(false);
    
   }
 };
@@ -152,8 +155,13 @@ export default function Heder() {
 
 {zauvs && (
   <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-    {/* Мини-окно */}
-   <div>
+
+  
+     {isLoading ? (
+     <ClockLoader color="#36d7b7" size={80} loading={true} />
+     ):(
+
+        <div>
      <div className="bg-white rounded-[33px]   min-[600]:w-[100%]  sm:max-[600px]:w-[350px] max-[500px]:w-[300px]  min-[600px]:mx-[0px]  max-[600px]:mx-[80px]   h-auto  min-[500px]:px-12  max-[500px]:px-7  py-6">
       <div className="flex justify-between mb-6">
         <h2 className="text-[24px] font-black leading-tight text-[rgba(33,148,255,1)]">
@@ -207,6 +215,7 @@ export default function Heder() {
       </h5>
     
    </div>
+     )}
    
   </div>
 )}

@@ -28,9 +28,9 @@ export default function ClientOnlyCarta() {
     </div>
 
 </div>    
-<div className='flex text-amber-50 justify-around  2xl:pt-[41px]  xl:pt-[40px] lg:pt-[200px] md:pt-[200px] min-[500px]:pt-[200px] max-[500px]:pt-[50px]  gap-5 flex-wrap'>
-        <h2 className='min-[1920px]:ml-[150px] max-[1900px]:ml-[0px]'>Политика конфиденциальности</h2>
-        <h2 className='min-[1920px]:mr-[150px] max-[1900px]:mr-[0px]'>Согласие на обработку персональных данных</h2>
+<div className='flex  justify-around  2xl:pt-[41px]  xl:pt-[40px] lg:pt-[200px] md:pt-[200px] min-[500px]:pt-[200px] max-[500px]:pt-[50px]  gap-5 flex-wrap'>
+        <a href='https://xn--56-6kchpq9cd0i.xn--p1ai/politika' className='min-[1920px]:ml-[150px] text-amber-50  hover:text-blue-400 underline  max-[1900px]:ml-[0px]'>Политика конфиденциальности</a>
+        <a href='https://xn--56-6kchpq9cd0i.xn--p1ai/politika' className='min-[1920px]:mr-[150px] text-amber-50  hover:text-blue-400 underline max-[1900px]:mr-[0px]'>Согласие на обработку персональных данных</a>
 
 </div>
 
