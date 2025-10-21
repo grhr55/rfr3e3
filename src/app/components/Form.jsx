@@ -26,14 +26,14 @@ export default function Heder() {
   name,
   telef,
 };
-    const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+    const response =   await fetch("https://rr3-1-dskg.onrender.com/zyuvs/zauv", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body:JSON.stringify(data)
     });
-    <ClockLoader color="#36d7b7" size={80} loading={true} />
+   
     if(response.ok){
     window.location.href='/Thankyou'
     }else{

@@ -27,7 +27,7 @@ const Contacts = async (e) => {
 
 try{
   const rot = {myname,mytelef,cont}
-  const response =  await fetch("https://rr3-2.onrender.com/ros/voprosi", {
+  const response =  await fetch("https://rr3-1-dskg.onrender.com/ros/voprosi", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -62,7 +62,7 @@ try{
       name,
       telef,
     };
-        const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+        const response =   await fetch("https://rr3-1-dskg.onrender.com/zyuvs/zauv", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

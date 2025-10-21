@@ -14,7 +14,8 @@ export default function Heder() {
 
   return (
     <div  className=" flex justify-center items-center flex-wrap 2xl:gap-[800px] xl:gap-[600px] lg:gap-[323px] md:gap-[120px]  sm:gap-[70px]   disabled:grid gap-[80px] pt-[24px] ">
-<div  className=" flex  items-center gap-[20px] ">
+<div 
+   className=" flex  items-center gap-[20px] ">
                   <Image
           src="/img/Logo.png"
           width={269}

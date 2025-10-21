@@ -52,7 +52,7 @@ const Databas = async (e) => {
   liter: selectedProduct.liter,
   img:selectedProduct.img
 };
-    const response =   await fetch("https://rr3-2.onrender.com/zyuvs/zauv", {
+    const response =   await fetch("https://rr3-1-dskg.onrender.com/zyuvs/zauv", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
